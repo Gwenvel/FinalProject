@@ -64,7 +64,13 @@ namespace FinalProject
                 .AddIISUrlRewrite(env.ContentRootFileProvider, "web.config"));
 
             app.UseDefaultFiles();
-            app.UseStaticFiles();
+
+            // app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                ServeUnknownFileTypes = true
+            });
+
             app.UseAuthentication();
             app.UseMvc();
 
