@@ -9,6 +9,7 @@ myApp.controller("LoginController", LoginController);
 myApp.controller("RegisterController", RegisterController);
 myApp.controller("SecretController", SecretController);
 myApp.controller("ScoreController", ScoreController);
+myApp.controller("TestController", TestController);
 
 myApp.service("$accountService", AccountService);
 myApp.service("$scoreService", ScoreService);
@@ -50,6 +51,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
             url: "/scores",
             templateUrl: "/ngApp/views/scores.html",
             controller: ScoreController,
+            controllerAs: "controller"
+        }).state("test", {
+            url: "/test",
+            templateUrl: "/ngApp/views/test.html",
+            controller: TestController,
             controllerAs: "controller"
         }).state("notFound", {
             url: "/notFound",
