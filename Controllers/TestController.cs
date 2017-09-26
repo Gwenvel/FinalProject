@@ -13,7 +13,7 @@ namespace FinalProject.Controllers
         [HttpGet("{score}")]
         public IActionResult Get(int score)
         {
-            return LocalRedirect("/test");
+            return LocalRedirect("/scores");
         }
 
         // // GET api/values
